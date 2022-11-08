@@ -26,7 +26,7 @@ public class BrokenClockTinkerModule implements Module {
 
     @Command("repairCheckState")
     public void repairCheckState() {
-
+        // --liqixin 和moduleEventWatcher去调用watch方法效果类似 由此触发类增强
         new EventWatchBuilder(moduleEventWatcher)
                 .onClass("com.taobao.demo.Clock")
                 .onBehavior("checkState")
